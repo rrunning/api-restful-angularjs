@@ -1,16 +1,16 @@
-import Form-fieldsModule from './form-fields';
-import Form-fieldsController from './form-fields.controller';
-import Form-fieldsComponent from './form-fields.component';
-import Form-fieldsTemplate from './form-fields.html';
+import FormFieldsModule from './formFields';
+import FormFieldsController from './formFields.controller';
+import FormFieldsComponent from './formFields.component';
+import FormFieldsTemplate from './formFields.html';
 
-describe('Form-fields', () => {
+describe('FormFields', () => {
   let $rootScope, makeController;
 
-  beforeEach(window.module(Form-fieldsModule));
+  beforeEach(window.module(FormFieldsModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new Form-fieldsController();
+      return new FormFieldsController();
     };
   }));
 
@@ -30,20 +30,20 @@ describe('Form-fields', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(Form-fieldsTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
+      expect(FormFieldsTemplate).to.match(/{{\s?\$ctrl\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
     // component/directive specs
-    let component = Form-fieldsComponent;
+    let component = FormFieldsComponent;
 
     it('includes the intended template', () => {
-      expect(component.template).to.equal(Form-fieldsTemplate);
+      expect(component.template).to.equal(FormFieldsTemplate);
     });
 
     it('invokes the right controller', () => {
-      expect(component.controller).to.equal(Form-fieldsController);
+      expect(component.controller).to.equal(FormFieldsController);
     });
   });
 });
