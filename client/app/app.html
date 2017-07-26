@@ -1,4 +1,9 @@
-<!-- Place all UI elements intended to be present across all routes in this file -->
-<div class="app">
-  <div ui-view></div>
-</div>
+<main>
+  <div>
+    <h1>MADLIBS GENERATOR</h1>
+  </div>
+  <form-fields user-words="$ctrl.userWords"></form-fields>
+  <buttons></buttons>
+  <stories user-words="$ctrl.userWords"></stories>
+  <div>{{ $ctrl.userWords }}</div>
+</main>

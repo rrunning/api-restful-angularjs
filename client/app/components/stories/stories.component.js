@@ -3,7 +3,10 @@ import controller from './stories.controller';
 import './stories.scss';
 
 let storiesComponent = {
-  bindings: {},
+  bindings: {
+    userWords: '<',
+    defaultWords: '<',
+  },
   template,
   controller
 };
