@@ -1,21 +1,15 @@
 class AppController {
     constructor(Words, StoryGenerator) {
-        this.userWords = {
-            noun: [],
-            adjective: [],
-            verb: [],
-            adverb: []
-        };
         this.Words = Words;
-        console.log(this.userWords);
+        console.log(this.Words);
     }
-    createStory() {
-        this.storyText = StoryGenerator.generateStory(this.story, this.userWords);
-    }
-    addUserWords(userWords, input) {
-        let userInput = document.getElementById()
-        userWords.noun.push(input)
-    }
+    // createStory() {
+    //     this.storyText = StoryGenerator.generateStory(this.story, this.userWords);
+    // }
+    // addUserWords(userWords, input) {
+    //     let userInput = document.getElementById()
+    //     userWords.noun.push(input)
+    // }
 }
 
 AppController.$inject = ['Words', 'StoryGenerator'];
