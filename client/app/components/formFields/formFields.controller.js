@@ -1,7 +1,6 @@
 class FormFieldsController {
   constructor(Words, StoryGenerator) {
     this.Words = Words;
-    console.log(this.Words);
   }
   updateNouns() {
     const nounArray = convertStringToArray(this.nounString);
