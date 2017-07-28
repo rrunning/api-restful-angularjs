@@ -21,7 +21,7 @@ class FormFieldsController {
   }
 
   $onChanges(changes) {
-    console.log('changes', changes);
+    // console.log('changes', changes);
   }
 
 }
