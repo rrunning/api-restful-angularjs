@@ -1,7 +1,7 @@
 class AppController {
     constructor(Words, StoryGenerator) {
         this.Words = Words;
-        console.log(this.Words);
+        // console.log(this.Words);
     }
     // createStory() {
     //     this.storyText = StoryGenerator.generateStory(this.story, this.userWords);

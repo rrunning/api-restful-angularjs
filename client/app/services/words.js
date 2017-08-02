@@ -4,14 +4,14 @@ let wordsModule = angular.module('app.words', [])
 .factory('Words', Words)
 .name;
 
+
+function Words(){
     const userWords = {
             nouns: [],
             adjectives: [],
             verbs: [],
             adverbs: []
         };
-
-function Words(){
     const service = {
         fillNouns: (nounsList) => {
             userWords.nouns = nounsList;
@@ -24,17 +24,16 @@ function Words(){
         },
         fillAdjectives: (adjectivesList) => {
             userWords.adjectives = adjectivesList;
-            console.log(adjectivesList);
-
+            // console.log(adjectivesList);
         },
         getNouns: () => (userWords.nouns),
         getVerbs: () => (userWords.verbs),
         getAdverbs: () => (userWords.adverbs),
         getAdjectives: () => (userWords.adjectives)
     };
+    console.log('userWords', userWords);
     return service;
-
-
+    // why do I need to return the service instead of returning an object that i declare within the service?
 }
 
 export default wordsModule;
