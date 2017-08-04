@@ -3,7 +3,7 @@ import controller from './formFields.controller';
 import './formFields.scss';
 
 let formFieldsComponent = {
-  bindings: {userWords: '<'},
+  bindings: {userWords: '='},
   template,
   controller
 };
