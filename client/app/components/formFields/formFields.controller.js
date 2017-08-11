@@ -3,19 +3,20 @@ class FormFieldsController {
     this.Words = Words;
   }
   updateNouns() {
-    const nounArray = convertStringToArray(this.nounString);
+    const nounArray = this.nounString;
     this.Words.fillNouns(nounArray);
   }
   updateVerbs() {
-    const verbArray = convertStringToArray(this.verbString);
+    const verbArray = this.verbString;
     this.Words.fillVerbs(verbArray);
   }
   updateAdverbs() {
-    const adverbArray = convertStringToArray(this.adverbString);
+    const adverbArray = this.adverbString;
     this.Words.fillAdverbs(adverbArray);
   }
   updateAdjectives() {
-    const adjectivesArray = convertStringToArray(this.adjectiveString);
+    const adjectivesArray = this.adjectiveString;
+    console.log(adjectivesArray);
     this.Words.fillAdjectives(adjectivesArray);
   }
 
@@ -23,10 +24,6 @@ class FormFieldsController {
     // console.log('changes', changes);
   }
 
-}
-
-const convertStringToArray = (string) => {
-  return string.split(',');
 }
 
 FormFieldsController.$inject = ['Words', 'StoryGenerator'];
