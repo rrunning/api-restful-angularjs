@@ -1,9 +1,11 @@
 class StoriesController {
   constructor(Words) {
     this.name = 'stories';
-    console.log('this.Words.userWords:',Words.userWords);
-    this.Words.userWords = Words.userWords;
+    this.Words = Words;
   }  
+  $onChange() {
+    console.log(this.Words.userWords);
+  }
 }
 
 StoriesController.$inject = ['Words', 'StoryGenerator'];

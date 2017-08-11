@@ -16,7 +16,6 @@ class FormFieldsController {
   }
   updateAdjectives() {
     const adjectivesArray = this.adjectiveString;
-    console.log(adjectivesArray);
     this.Words.fillAdjectives(adjectivesArray);
   }
 
