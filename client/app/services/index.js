@@ -1,10 +1,8 @@
 import angular from 'angular';
-import Words from './words';
-import StoryGenerator from './storyGenerator';
+import Item from './item';
 
 let commonModule = angular.module('app.services', [
-    Words,
-    StoryGenerator
+    Item,
 ])
 .name;
 

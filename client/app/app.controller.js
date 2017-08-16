@@ -1,9 +1,9 @@
 class AppController {
-    constructor(Words, StoryGenerator) {
-        this.Words = Words;
+    constructor(Item) {
+        this.Item = Item;
     }
 }
 
-AppController.$inject = ['Words', 'StoryGenerator'];
+AppController.$inject = ['Item'];
 
 export default AppController;
