@@ -20,15 +20,40 @@ const defaultAdverbs = ['deeply', 'famously', 'brutally', 'anywhere', 'miserably
 function Words(){
     const service = {
         fillNouns: (nounsList) => {
+            while (nounsList.length < 4) {
+                const randomWord = defaultNouns[Math.floor(Math.random() * 10)];
+                if (nounsList.indexOf(randomWord) === -1) {
+                nounsList.push(randomWord);
+                }
+            }
             userWords.nouns = nounsList;
         },
         fillVerbs: (verbsList) => {
+            while (verbsList.length < 4) {
+                const randomWord = defaultVerbs[Math.floor(Math.random() * 10)];
+                if (verbsList.indexOf(randomWord) === -1) {
+                    verbsList.push(randomWord);
+                }
+            }
             userWords.verbs = verbsList;
+
         },
         fillAdverbs: (adverbsList) => {
+             while (adverbsList.length < 4) {
+               const randomWord = defaultAdverbs[Math.floor(Math.random() * 10)];
+               if (adverbsList.indexOf(randomWord) === -1) {
+                 adverbsList.push(randomWord);
+               }
+             }
             userWords.adverbs = adverbsList;
         },
         fillAdjectives: (adjectivesList) => {
+            while (adjectivesList.length < 4) {
+              const randomWord = defaultAdjectives[Math.floor(Math.random() * 10)];
+              if (adjectivesList.indexOf(randomWord) === -1) {
+                adjectivesList.push(randomWord);
+              }
+            }
             userWords.adjectives = adjectivesList;
         },
         userWords: userWords,
@@ -37,18 +62,8 @@ function Words(){
         getVerbs: () => (userWords.verbs),
         getAdverbs: () => (userWords.adverbs),
         getAdjectives: () => (userWords.adjectives),
-        // randomizeArr: (arr) => {
-        //     for (const i = arr.length - 1; i >= 0; i--) {
-        //         const randomIndex = Math.floor(Math.random() * (i + 1));
-        //         const itemAtIndex = arr[randomIndex];
-        //         arr[randomIndex] = arr[i];
-        //         arr[i] = itemAtIndex;
-        //     }
-        // }
     };
     return service;
 }
-
-
 
 export default wordsModule;
