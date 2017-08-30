@@ -9,7 +9,7 @@ angular.module('app', [
     uiRouter,
     Common,
     Components,
-    Services
+    Services,
   ])
   .config(($locationProvider) => {
     "ngInject";
